@@ -132,6 +132,33 @@ except Exception as e:
 
 # preview data
 
+def drop_columns(df, columns):
+    """
+    Drop specified columns from a DataFrame.
+    """
+    df = df.drop(columns=columns, errors='ignore')
+    return df
+
+columns_to_drop = [
+    "first_name"
+    "last_name"
+    "other_name"
+    "respondent_phone_2"
+    "respondent_phone_3"
+    "village_dem"
+    "respondent_location"
+    "survey_audio_1"
+    "survey_audio_2"
+    "survey_audio_3"
+    "survey_audio_4"
+    "survey_audio_5"
+    "fieldofficer"
+    "name"
+    "respondent_phone"
+]
+
+df = drop_columns(df, columns_to_drop)
+
 st.subheader("Data preview")
 with st.expander("View data records"):
     st.write(df.head(3))
