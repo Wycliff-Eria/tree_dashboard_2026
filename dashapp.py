@@ -118,10 +118,8 @@ if uploaded_file is None:
     - Trees planted
     - Tree survival
     - Results by district
-    - Results by site
     - Results by tree species
     - Training participation
-    - Respondent characteristics
     """)
 
     st.stop()
@@ -129,7 +127,6 @@ if uploaded_file is None:
 # ============================================================
 # LOAD DATA
 # ============================================================
-st.cache_data
 
 try:
 
