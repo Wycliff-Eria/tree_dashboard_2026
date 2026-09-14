@@ -166,6 +166,7 @@ columns_to_drop = [
     "fieldofficer",
     "name",
     "respondent_phone"
+    "formid"
 ]
 
 df = drop_columns(df, columns_to_drop)
