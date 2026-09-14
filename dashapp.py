@@ -150,6 +150,8 @@ def drop_columns(df, columns):
     df = df.drop(columns=columns, errors='ignore')
     return df
 
+df.columns = df.columns.str.strip().str.lower()
+
 columns_to_drop = [
     "first_name",
     "last_name",
@@ -169,7 +171,7 @@ columns_to_drop = [
     "formid"
 ]
 
-df = drop_columns(df, columns_to_drop)
+df.drop(columns=columns_to_drop, inplace=True, errors="ignore")
 
 df = df[df['username'].str.strip().str.lower() != 'mel_pilot']
 
