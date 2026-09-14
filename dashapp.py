@@ -159,6 +159,8 @@ columns_to_drop = [
 
 df = drop_columns(df, columns_to_drop)
 
+df = df[df['username'].str.strip().str.lower() != 'mel_pilot']
+
 st.subheader("Data preview")
 with st.expander("View data records"):
     st.write(df.head(3))
