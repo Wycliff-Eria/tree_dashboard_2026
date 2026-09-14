@@ -21,10 +21,24 @@ st.markdown("""
 }
 
 [data-testid="stMetric"] {
-    background-color: black;
+    background-color: white;
     border: 1px solid #dddddd;
     padding: 15px;
     border-radius: 10px;
+}
+
+[data-testid="stMetricLabel"] {
+    color: black !important;
+    font-weight: bold;
+}
+
+[data-testid="stMetricValue"] {
+    color: black !important;
+    font-weight: bold;
+}
+
+[data-testid="stMetricDelta"] {
+    color: black !important;
 }
 
 .dashboard-title {
@@ -34,7 +48,7 @@ st.markdown("""
 
 .dashboard-subtitle {
     font-size: 17px;
-    color: #666666;
+    color: #66666;
 
 .header {
         position: sticky;
